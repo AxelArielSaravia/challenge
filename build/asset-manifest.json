@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.61619cdb.css",
+    "main.js": "/static/js/main.0594bf32.js",
+    "static/media/Axiforma-Bold.ttf": "/static/media/Axiforma-Bold.179a245385b803119e63.ttf",
+    "static/media/Quicksand-Regular.ttf": "/static/media/Quicksand-Regular.bbc435b5553557b90fd9.ttf",
+    "static/media/Axiforma-Bold.woff": "/static/media/Axiforma-Bold.a5763688e85a57f1a5f6.woff",
+    "static/media/Quicksand-Regular.woff": "/static/media/Quicksand-Regular.30a9ad4d9b7fc4ff2f35.woff",
+    "static/media/Quicksand-Regular.woff2": "/static/media/Quicksand-Regular.f0781a5f799f250b8f9e.woff2",
+    "static/media/Axiforma-Bold.woff2": "/static/media/Axiforma-Bold.a3329a3314dd825fab49.woff2",
+    "index.html": "/index.html",
+    "main.61619cdb.css.map": "/static/css/main.61619cdb.css.map",
+    "main.0594bf32.js.map": "/static/js/main.0594bf32.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61619cdb.css",
+    "static/js/main.0594bf32.js"
+  ]
+}
