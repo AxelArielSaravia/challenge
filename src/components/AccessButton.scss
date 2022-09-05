@@ -1,0 +1,10 @@
+.button-access {
+    width: max-content;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .button-access:hover span{
+        border-bottom: 1px solid;
+    }
+}

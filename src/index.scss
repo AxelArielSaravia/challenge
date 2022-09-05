@@ -1,0 +1,168 @@
+/* FONTS */
+@font-face {
+  font-family: 'Axiforma';
+  src: local('Axiforma Bold'), local('Axiforma-Bold'),
+      url('/fonts/Axiforma-Bold.woff2') format('woff2'),
+      url('/fonts/Axiforma-Bold.woff') format('woff'),
+      url('/fonts/Axiforma-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: local('Quicksand Regular'), local('Quicksand-Regular'),
+      url('/fonts/Quicksand-Regular.woff2') format('woff2'),
+      url('/fonts/Quicksand-Regular.woff') format('woff'),
+      url('/fonts/Quicksand-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+/* DEFAULTS */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+* { box-sizing: border-box; }
+button {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button:hover, 
+button:active,
+button:focus {
+  box-shadow: none;
+  user-select: none;
+}
+h1, h2, h3, h4, h5, h6, p{margin: 0 !important;}
+h1 {
+  font-family: "Axiforma", sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 1.8rem !important;
+}
+
+@media screen and (min-width: 768px) {
+  h1 { font-size: 2rem !important; }
+}
+@media screen and (min-width: 992px) {
+  h1 { font-size: 2.4rem !important; }
+}
+
+.card {
+  border: none !important;
+}
+.card-img {
+  object-fit:cover;
+  object-position: 50% 20%;
+  max-height: 210px;
+}
+
+
+/* Override default BOOTSTRAP variables before the import */
+$primary:       #17171b;
+$secondary:     #fff;
+/* 
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+*/
+$body-bg: $primary;
+$body-color: $secondary;
+$font-size-base: 0.8rem;
+$font-family-base: 'Quicksand', sans-serif;
+
+/* CUSTOM VARIABLES */
+
+$cp-1:  $primary;
+$cp-2:  #1e1e21;
+$cp-3:  #323232;
+$cp-4:  #606265;
+$cs-1:  $secondary;
+$cs-2:  #c4c4c4;
+$cs-3:  #adadad;
+
+$c-orange: #F36F45;
+$c-violet: #8769FF;
+$c-blue: #61D1EA;
+
+$ca-1:  #606265b2;
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+#root {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+/* SCROLLBAR FIREFOX */
+* {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color:var($cp-2) var($cp-4);   /* scroll thumb and track */ 
+}
+
+/* SCROLLBAR webkit */
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: $cp-2; /* or add it to the track */
+}
+
+/* Add a thumb */
+*::-webkit-scrollbar-thumb {
+  background: $cp-4;
+}
+/* COLOR */
+.c-0 { color: $cp-1 }
+.c-1 { color: $cs-1 }
+.c-2 { color: $cs-2 }
+.c-3 { color: $cs-3 }
+/* BACKGROUND COLOR */
+.bg-c-1 { background-color: $cp-1; }
+.bg-c-2 { background-color: $cp-2; }
+.bg-c-3 { background-color: $cp-3; }
+.bg-c-4 { background-color: $cp-4; }
+.bg-c-5 { background-color: $cs-3; }
+.bg-c-6 { background-color: $cs-2; }
+.bg-c-7 { background-color: $ca-1; }
+.bg-c-white { background-color: $cs-1; }
+.bg-c-orange { background-color: $c-orange; }
+.bg-c-violet { background-color: $c-violet; }
+.bg-c-blue { background-color: $c-blue; }
+.bg-c-gradient { background-color: linear-gradient( $ca-1 , $cp-4); }
+/* Line block */
+.h-line {
+  width: 100%;
+  height: 1px;
+  background-color: $cp-3;
+}
+.v-line {
+  width: 1px;
+  height: 100%;
+  background-color: $cp-3;
+}
+/* SPACE */
+.v-space-1 { width:100%; height: 16px; }
+.v-space-2 { width:100%; height: 20px; }
+.v-space-4 { width:100%; height: 40px; }
+/* ICONS */
+.bi { 
+  color: $secondary; 
+  width: 25px;
+}
+/*Z-INDEX*/
+.z-index-0 { z-index: 0 }
+.z-index-1 { z-index: 1 }
+.z-index-2 { z-index: 2 }
+.z-index-3 { z-index: 3 }
+.z-index-4 { z-index: 4 }

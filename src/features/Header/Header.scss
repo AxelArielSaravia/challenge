@@ -1,0 +1,26 @@
+.navbar {
+    position: relative;
+
+    .nav-item.select {
+        font-weight: bold;
+    }
+    .icon-nav-select {
+        opacity: 0;
+        transition: opacity 0.2s ease-out; 
+    }
+    .icon-nav-select.select {
+        opacity: 1;
+    }
+
+
+    .navbar-collapse {
+        position: relative;
+        opacity: 90%;
+        & > div {
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
