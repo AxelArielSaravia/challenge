@@ -5,7 +5,7 @@ import userState from "../../state/user.js";
 import { selectRandomMovie } from "../utils.js";
 
 import { PlayButton } from "../../components/index.js";
-import { Card2 } from "../Card/Card.js";
+import { Card2, CardLoader } from "../Card/Card.js";
 import { IconAdd } from "../../icons/index.js"
 
 import "./Aside.scss";
@@ -49,9 +49,15 @@ const Aside = memo(function Aside({appState, isMinWidth768}) {
                             <section className="p-2" style={{width: "100%"}}>
                                 <h5 className="fw-bold p-2">New trailers</h5>
                                 <div className="d-flex flex-row flex-xl-column align-items-center justify-content-around">
-                                    { !discoverAreLoading && 
-                                    twoMovies.map((el, i) => {
-                                        return (
+                                    { discoverAreLoading  
+                                        ? [0,0].map((_, i) => 
+                                            <CardLoader
+                                                key={"loader" + i}
+                                                width="400px"
+                                                height= "150px"
+                                            />
+                                        )
+                                        : twoMovies.map((el) => (
                                             <Card2 
                                                 key={el.id} 
                                                 cardState={el}
@@ -63,8 +69,7 @@ const Aside = memo(function Aside({appState, isMinWidth768}) {
                                                 imgStyle={{height: "150px"}}
                                                 appGenres={appGenres}
                                             />
-                                        )})
-                                    }
+                                    ))}
                                 </div>
                             </section>
                         )}
@@ -96,9 +101,9 @@ const Aside = memo(function Aside({appState, isMinWidth768}) {
             <div className="aside-action z-index-3 d-flex felx-column justify-content-center align-items-center align-items-xl-start py-4 py-xl-0 bg-c-1"  
                 onClick={onClickAsideActive}
             >
-                <div className={open ? "button open" :"button"}>
+                <button type="button" className={open ? "button open" :"button"}>
                     <PlayButton/>
-                </div>
+                </button>
                 <div className="v-line"/>
             </div>
         </div>

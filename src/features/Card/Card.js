@@ -17,7 +17,8 @@ function CardGen({cardState, style, size = "w500", imgStyle, children}) {
         <div className="card-container p-3" style={style ? style : null}>
             <div className="Card rounded" style={style ? style : null}>
                 <img 
-                    className="card-img img-fluid rounded z-index-2" 
+                    className="card-img img-fluid rounded z-index-2"
+                    decoding="async"
                     src={imgSrc} 
                     alt={name} 
                     style={imgStyle? imgStyle: null}
@@ -284,6 +285,18 @@ function Card1 ({cardState, style, size = "w500", imgStyle, appGenres}) {
 }
 
 
+const CardLoader = ({className, height, width}) => (
+    <div 
+        className="card-loader p-3"
+        style={width ? {width: width} : null}
+    >
+        <div 
+            className={className ? className + " bg-c-2 rounded" : "bg-c-2 rounded"}  
+            style={height ? {height: height} : null}
+        ></div>
+    </div>
+);
+
 
 export {
     CardGen,
@@ -296,4 +309,5 @@ export {
     CardUserWatch,
     Card1,
     Card2,
+    CardLoader,
 }

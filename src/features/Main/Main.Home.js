@@ -2,7 +2,7 @@ import { memo, useMemo } from "react";
 
 import { AccessButton } from "../../components/index.js";
 
-import { Card1, CardUserWatch, CardFull } from "../Card/Card.js";
+import { Card1, CardUserWatch, CardFull, CardLoader } from "../Card/Card.js";
 
 import { selectRandomMovie } from "../utils.js";
 
@@ -21,7 +21,9 @@ const MainHome = memo(function MainHome({appState, isMinWidth768, isMinWidth992,
     return (
         <>
             <section className="main-header">
-                { !discoverAreLoading && 
+                { discoverAreLoading ?
+                    <CardLoader height="180px"/>
+                : 
                     <CardFull 
                         cardState={fourMovies[0]}
                         imgStyle={{height: "180px"}}
@@ -40,8 +42,11 @@ const MainHome = memo(function MainHome({appState, isMinWidth768, isMinWidth992,
                 </div>
                 <div className="section-card">
                     <div className="d-flex flex-md-row flex-column align-items-center justify-content-around">
-                        { !UserAreLoading &&
-                            userWatching.filter((_, i) => i < 2 ).map(el => (
+                        { UserAreLoading 
+                             ? [0,0].map((_, id) => (
+                                <CardLoader key={"loader"+ id} height="210px"/>
+                            ))
+                            : userWatching.filter((_, i) => i < 2 ).map(el => (
                                 <CardUserWatch 
                                     key={el.id} 
                                     cardState={el}
@@ -60,20 +65,22 @@ const MainHome = memo(function MainHome({appState, isMinWidth768, isMinWidth992,
                 </div>
                 <div className="section-card">
                     <div className="d-flex flex-md-row flex-column align-items-center justify-content-around">
-
-                            { !discoverAreLoading && 
-                                fourMovies.map((el, i) => {
-                                    if (i === 0) return null;
-                                    if (isMinWidth768 && !isMinWidth992 && i === 3) return null;
-                                    return (
-                                        <Card1 
-                                            key={el.id} 
-                                            cardState={el}
-                                            appGenres={appGenres}
-                                        />
-                                    )
-                                })
-                            }
+                        { discoverAreLoading 
+                            ? [0,0,0].map((_, id) => (
+                                <CardLoader key={"loader"+id} height="200px"/>
+                            ))
+                            : fourMovies.map((el, i) => {
+                                if (i === 0) return null;
+                                if (isMinWidth768 && !isMinWidth992 && i === 3) return null;
+                                return (
+                                    <Card1 
+                                        key={el.id} 
+                                        cardState={el}
+                                        appGenres={appGenres}
+                                    />
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </section>

@@ -115,7 +115,7 @@ $ca-1:  #606265b2;
 /* SCROLLBAR webkit */
 *::-webkit-scrollbar {
   width: 8px;
-  background-color: $cp-2; /* or add it to the track */
+  background-color: transparent;
 }
 
 /* Add a thumb */
