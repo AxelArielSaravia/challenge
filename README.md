@@ -15,6 +15,7 @@ Acá la idea es explicar la organización de las carpetas dentro de src.
        - components
        - features
        - fonts
+       - hooks
        - icons
        - images
        - reducer
@@ -33,7 +34,10 @@ Suele existir un archivo utils.js donde se escriben funciones útiles que se pue
  
 ##### Fonts:
 Se guardan las fuentes que se utilizan. Se inicializan en index.scss.
- 
+
+##### Hooks:
+Se guarndan los hooks generales, que pueden ser usador por varios componentes.
+
 ##### Icons:
 Se guardan los componentes vsg, que se utilizan como iconos.
  
