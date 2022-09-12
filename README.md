@@ -36,7 +36,7 @@ Suele existir un archivo utils.js donde se escriben funciones útiles que se pue
 Se guardan las fuentes que se utilizan. Se inicializan en index.scss.
 
 ##### Hooks:
-Se guarndan los hooks generales, que pueden ser usador por varios componentes.
+Se guardan los hooks generales, que pueden ser usado por varios componentes.
 
 ##### Icons:
 Se guardan los componentes vsg, que se utilizan como iconos.
@@ -123,7 +123,7 @@ El estado emulado del usuario es:
  
 *watching* son las películas o series que está viendo el usuario. Y *genres* son los géneros preferidos del usuario.
  
-Esta diferenciacion general entre *movie* y *tvShow* está dada por la api.
+Esta diferenciación general entre *movie* y *tvShow* está dada por la api.
  
 ### Acciones
 Se enumeran las distintas acciones que cambian el estado de la aplicación. Estas acciones son las acciones que ejecuta el reductor. También, con las acciones, se enumeran a grandes rasgos el comportamiento de la aplicación en cada estado.

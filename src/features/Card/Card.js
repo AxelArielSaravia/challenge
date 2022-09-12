@@ -28,9 +28,7 @@ function CardGen({cardState, style, size = "w500", imgStyle, children}) {
             </div>
         </div>
     );
-
 }
-
 
 
 function CardBottom({title, childrenRight, childrenLeft}) {
