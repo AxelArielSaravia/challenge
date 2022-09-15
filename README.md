@@ -1,4 +1,6 @@
 # Code challenge
+Página de [muestra](https://movie-pg.web.app/).
+
 Para la administración de paquetes de node.js se utiliza Yarn.
  
 Para la creación de la aplicación se utilizó la herramienta create-react-app para crear una configuración local rápida.
@@ -36,7 +38,7 @@ Suele existir un archivo utils.js donde se escriben funciones útiles que se pue
 Se guardan las fuentes que se utilizan. Se inicializan en index.scss.
 
 ##### Hooks:
-Se guardan los hooks generales, que pueden ser usado por varios componentes.
+Se guardan los hooks generales que pueden ser usado por varios componentes.
 
 ##### Icons:
 Se guardan los componentes vsg, que se utilizan como iconos.
